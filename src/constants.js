@@ -95,7 +95,7 @@ export default function Example() {
             <div className="fixed top-0 right-0 h-full w-1/2 bg-gray-50" aria-hidden="true" />
             <div className="relative flex min-h-full flex-col">
                 {/* Navbar */}
-                <Navbar/>
+                <Navbar />
 
                 {/* 3 column wrapper */}
                 <div className="mx-auto w-full max-w-7xl flex-grow lg:flex xl:px-8">
@@ -114,3 +114,6 @@ export default function Example() {
         </>
     )
 }
+
+
+

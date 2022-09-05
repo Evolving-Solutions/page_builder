@@ -2,28 +2,12 @@ import { Menu } from "@headlessui/react";
 import {
   BarsArrowUpIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
   StarIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { classNames } from "../constants";
 
-export function PagesList() {
-  // make an api call to get the pages with usEfffect
-
-  const [pages, setPages] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-  // fetch the data from the server and set the state
-  useEffect(() => {
-    fetch("http://localhost:5000/pages")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setPages(data);
-      });
-  }, []);
-
+export default function PagesList({ pages }) {
   return (
     <div className="bg-white lg:min-w-0 lg:flex-1">
       <div className="border-b border-t border-gray-200 pl-4 pr-6 pt-4 pb-4 sm:pl-6 lg:pl-8 xl:border-t-0 xl:pl-6 xl:pt-6">
@@ -124,15 +108,13 @@ export function PagesList() {
                   </h2>
                 </div>
               </div>
-              
 
-             
               {/* Repo meta info */}
               <div className="hidden flex-shrink-0 flex-col items-end space-y-3 sm:flex">
                 <p className="flex items-center space-x-4">
                   <Link
                     href={`http://localhost:3001/editor/${page.slug}`}
-                    className="relative rounded border border-transparent bg-indigo-100  px-2.5 py-1.5 text-sm text-xs font-medium text-blue-700 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="relative rounded border border-transparent bg-indigo-100  px-2.5 py-1.5 text-sm  font-medium text-blue-700 hover:bg-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                   >
                     Edit Page
                   </Link>
