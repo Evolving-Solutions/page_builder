@@ -1,4 +1,4 @@
-// import 'grapesjs/dist/css/grapes.min.css'
+import 'grapesjs/dist/css/grapes.min.css'
 import "focus-visible";
 import "@/styles/tailwind.css";
 

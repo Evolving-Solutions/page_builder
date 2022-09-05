@@ -15,7 +15,7 @@
   ```
 */
 import { AccountProfile } from './components/AccountProfile'
-import { ProjectsList } from './components/ProjectsList'
+import { ProjectsList } from './components/PagesList'
 import { ActivityFeed } from './components/ActivityFeed'
 import { Navbar } from './components/Navbar'
 
@@ -41,7 +41,30 @@ export const projects = [
         starred: true,
         active: true,
     },
-    // More projects...
+    {
+        name: 'Workcation',
+        href: '#',
+        siteHref: '#',
+        repoHref: '#',
+        repo: 'debbielewis/workcation',
+        tech: 'Laravel',
+        lastDeploy: '3h ago',
+        location: 'United states',
+        starred: true,
+        active: true,
+    },
+    {
+        name: 'Workcation',
+        href: '#',
+        siteHref: '#',
+        repoHref: '#',
+        repo: 'debbielewis/workcation',
+        tech: 'Laravel',
+        lastDeploy: '3h ago',
+        location: 'United states',
+        starred: true,
+        active: true,
+    },
 ]
 export const activityItems = [
     { project: 'Workcation', commit: '2d89f0c8', environment: 'production', time: '1h' },
